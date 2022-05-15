@@ -1,0 +1,170 @@
+@font-face {
+    font-family: "Pokemon Classic";
+    src: url("/static\fontes\Pokemon Classic.ttf") format("truetype");
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    height: 100%;
+
+}
+
+body {
+    border-radius: 8px;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(#56D7ED, #8FF1A3);
+    align-items: center;
+}
+
+/*Parte dos inputs*/
+
+.listaPokebola {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pokebola {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, red 50%, white 50%);
+    border: 1px solid black;
+}
+
+.camposDeTexto {
+    box-sizing: border-box;
+    width: 25%;
+    height: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: linear-gradient(#56D7ED, #8FF1A3);
+}
+
+input {
+    font-size: 12px;
+    box-sizing: border-box;
+    padding-left: 15px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+
+
+/*Parte da Tabela*/
+
+
+
+table {
+    table-layout: fixed;
+    width: 1240px;
+    height: 800px;
+    justify-content: center;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    text-align: center;
+    border-radius: 8%;
+}
+
+
+#typeColumn {
+    background-color: white;
+    width: 40px;
+    border-bottom: grey 0.1px solid;
+}
+
+#linhaDeCima td:not(#totalResistencias) {
+    box-sizing: border-box;
+    border-right: grey 0.1px solid;
+    background-color: white;
+    font-family: "Pokemon Classic";
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#linhaDeBaixo td:not(#totalResistenciasLinhaPar) {
+    border-right: grey 0.1px solid;
+}
+
+
+#totalFraquezas, #totalResistencias{
+    box-sizing: border-box;
+    font-family: "Pokemon Classic";
+    background-color: white;
+    font-weight: bold;
+    width: 150px;
+}
+
+
+#totalResistenciasLinhaImpar, #totalResistenciasLinhaPar{
+    border-bottom: grey 0.1px solid;
+    font-size: 15px;
+    width: 150px;
+}
+
+
+
+#imgTable {
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+
+.rowImpar {
+    background-color: #9FD4E4;
+}
+
+.rowPar {
+    background-color: white;
+}
+
+tbody td {
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Pokemon CLassic";
+}
+
+#linhaDeBaixo td{
+    border-bottom: none;
+}
+
+td:not(#typeColumn, #totalResistenciasLinhaImpar, #totalResistenciasLinhaPar, #linhaDeBaixo td, #linhaDeCima td) {
+    box-sizing: border-box;
+    width: 150px;
+    border: grey 0.1px solid;
+    margin: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+#totalFraquezasLinhaImpar {
+    background-color: #C67176;
+}
+
+#totalFraquezasLinhaPar {
+    background-color: #FF8F8F;
+}
+
+#totalResistenciasLinhaImpar {
+    background-color: #8FA06A;
+}
+
+#totalResistenciasLinhaPar {
+    background-color: #BEED8C;
+}

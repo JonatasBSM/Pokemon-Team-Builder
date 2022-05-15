@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Team Builder</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="static\script.js"></script>
+    <link rel="stylesheet" href="static\style.css">
+
+</head>
+<body>
+
+
+        <div class="camposDeTexto">
+            <ul class="listaPokebola">
+                <li class="pokebola">
+                    <input id="list1" name="list1" list="pokemon" placeholder="Pokemon 1">
+                    <datalist id="pokemon">
+                        {% for pokemon in pokemonList %}
+                        <option value= "{{ pokemon['name'] }}">
+                        {% endfor %}
+                    </datalist>
+                </li>
+                <li class="pokebola">
+                    <input id="list2" name="list2" list="pokemon" placeholder="Pokemon 2">
+                    <datalist id="pokemon">
+                        {% for pokemon in pokemonList %}
+                        <option value= "{{ pokemon['name'] }}">
+                        {% endfor %}
+                    </datalist>
+                </li>
+                
+                <li class="pokebola">
+                    <input id="list3" name="list3" list="pokemon" placeholder="Pokemon 3">
+                    <datalist id="pokemon">
+                        {% for pokemon in pokemonList %}
+                        <option value= "{{ pokemon['name'] }}">
+                        {% endfor %}
+                    </datalist>
+                </li>
+            </ul>
+
+            <ul class="listaPokebola">
+                <li class="pokebola">
+                    <input id="list4" name="list4" list="pokemon" placeholder="Pokemon 4">
+                    <datalist id="pokemon">
+                        {% for pokemon in pokemonList %}
+                        <option value= "{{ pokemon['name'] }}">
+                        {% endfor %}
+                    </datalist>                
+                </li>
+    
+                <li class="pokebola">
+                    <input id="list5" name="list5" list="pokemon" placeholder="Pokemon 5">
+                    <datalist id="pokemon">
+                        {% for pokemon in pokemonList %}
+                        <option value= "{{ pokemon['name'] }}">
+                        {% endfor %}
+                    </datalist>
+                </li>
+    
+                <li class="pokebola">
+                    <input id="list6" name="list6" list="pokemon" placeholder="Pokemon 6">
+                    <datalist id="pokemon">
+                        {% for pokemon in pokemonList %}
+                        <option value= "{{ pokemon['name'] }}">
+                        {% endfor %}
+                    </datalist>
+                </li>
+            </ul>
+
+
+        </div>
+
+
+
+        
+
+        <table>
+            <thead id="thead">
+                <tr id="linhaDeCima">
+                    <td  id="typeColumn"></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td id="totalFraquezas"><img src="static\images\FraquezaRedimensionado.png" alt="" id="imgTable">Fraq. Total</td>
+                    <td id="totalResistencias"><img src="static\images\ResistênciaRedimensionado.png" alt="" id="imgTable">Resi. Total</td>
+                </tr>
+            </thead>
+
+            <tbody id="tbody">
+                <tr class="rowImpar">
+                    <td id="typeColumn"><img id="imgTable" class="normalType" src="static\images\NormalRedimensionado.png" alt=""></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="totalFraquezasLinhaImpar"></td>
+                    <td id="totalResistenciasLinhaImpar"></td>
+                </tr>
+                <tr class="rowPar">
+                    <td id="typeColumn"><img src="static\images\LutadorRedimensionado.png" class="fightingType" alt="" id="imgTable"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="totalFraquezasLinhaPar"></td>
+                    <td id="totalResistenciasLinhaPar"></td>
+                </tr>
+                <tr class="rowImpar">
+                    <td id="typeColumn"><img src="static\images\VoadorRedimensionado.png" id="imgTable" class="flyingType" alt=""></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="totalFraquezasLinhaImpar"></td>
+                    <td id="totalResistenciasLinhaImpar"></td>
+                </tr>
+                <tr class="rowPar">
+                    <td id="typeColumn"><img src="static\images\VenenosoRedimensionado.png" id="imgTable" class="poisonType" alt=""></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="totalFraquezasLinhaPar"></td>
+                    <td id="totalResistenciasLinhaPar"></td>
+                </tr>
+                <tr class="rowImpar">
+                    <td id="typeColumn"><img src="static\images\TerrestreRedimensionado.png" id="imgTable" alt="" class="groundType"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="totalFraquezasLinhaImpar"></td>
+                    <td id="totalResistenciasLinhaImpar"></td>
+                </tr>
+                <tr class="rowPar">
+                    <td id="typeColumn"><img src="static\images\PedraRedimensionado.png" alt="" id="imgTable" class="rockType"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="totalFraquezasLinhaPar"></td>
+                    <td id="totalResistenciasLinhaPar"></td>
+                </tr>
+                <tr class="rowImpar">
+                    <td id="typeColumn"><img src="static\images\InsetoRedimensionado.png" alt="" id="imgTable" class="bugType"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="totalFraquezasLinhaImpar"></td>
+                    <td id="totalResistenciasLinhaImpar"></td>
+                </tr>
+                <tr class="rowPar">
+                    <td id="typeColumn"><img src="static\images\FantasmaRedimensionado.png" alt="" id="imgTable" class="ghostType"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="totalFraquezasLinhaPar"></td>
+                    <td id="totalResistenciasLinhaPar"></td>
+                </tr>
+                <tr class="rowImpar">
+                    <td id="typeColumn"><img src="static\images\AçoRedimensionado.png" alt="" id="imgTable" class="steelType"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="totalFraquezasLinhaImpar"></td>
+                    <td id="totalResistenciasLinhaImpar"></td>
+                </tr>
+                <tr class="rowPar">
+                    <td id="typeColumn"><img src="static\images\FogoRedimensionado.png" alt="" id="imgTable" class="fireType"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="totalFraquezasLinhaPar"></td>
+                    <td id="totalResistenciasLinhaPar"></td>
+                </tr>
+                <tr class="rowImpar">
+                    <td id="typeColumn"><img src="static\images\ÁguaRedimensionado.png" alt="" id="imgTable" class="waterType"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="totalFraquezasLinhaImpar"></td>
+                    <td id="totalResistenciasLinhaImpar"></td>
+                </tr>
+                <tr class="rowPar">
+                    <td id="typeColumn"><img src="static\images\GramaRedimensionado.png" alt="" id="imgTable" class="grassType"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="totalFraquezasLinhaPar"></td>
+                    <td id="totalResistenciasLinhaPar"></td>
+                </tr>
+                <tr class="rowImpar">
+                    <td id="typeColumn"><img src="static\images\ElétricoRedimensionado.png" alt="" id="imgTable" class="electricType"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="totalFraquezasLinhaImpar"></td>
+                    <td id="totalResistenciasLinhaImpar"></td>
+                </tr>
+                <tr class="rowPar">
+                    <td id="typeColumn"><img src="static\images\PsíquicoRedimensionado.png" alt="" id="imgTable" class="psychicType"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="totalFraquezasLinhaPar"></td>
+                    <td id="totalResistenciasLinhaPar"></td>
+                </tr>
+                <tr class="rowImpar">
+                    <td id="typeColumn"><img src="static\images\GeloRedimensionado.png" alt="" id="imgTable" class="iceType"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="totalFraquezasLinhaImpar"></td>
+                    <td id="totalResistenciasLinhaImpar"></td>
+                </tr>
+                <tr class="rowPar">
+                    <td id="typeColumn"><img src="static\images\DragãoRedimensionado.png" alt="" id="imgTable" class="dragonType"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="totalFraquezasLinhaPar"></td>
+                    <td id="totalResistenciasLinhaPar"></td>
+                </tr>
+                <tr class="rowImpar">
+                    <td id="typeColumn"><img src="static\images\SombrioRedimensionado.png" alt="" id="imgTable" class="darkType"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="totalFraquezasLinhaImpar"></td>
+                    <td id="totalResistenciasLinhaImpar"></td>
+                </tr>
+                <tr  id="linhaDeBaixo" class="rowPar">
+                    <td id="typeColumn"><img src="static\images\FadaRedimensionado.png" alt="" id="imgTable" class="fairyType"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="totalFraquezasLinhaPar"></td>
+                    <td id="totalResistenciasLinhaPar"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        
+</body>
+</html>
+
+
+
+
+
+
+
